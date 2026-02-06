@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TOTP Authentication</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header><h1>TOTP Authentication</h1></header>
+  <main>
+    <div class="auth-form">
+      <h2>Enter Your TOTP Code</h2>
+      {% if error %}<p class="error">{{ error }}</p>{% endif %}
+      <form method="post">
+        <label for="totp">TOTP Code:</label>
+        <input type="text" name="totp" required>
+        <button type="submit">Verify</button>
+      </form>
+      <div style="margin-top: 1rem;">
+        <a href="{{ url_for('backup_prompt') }}">Use backup code instead</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

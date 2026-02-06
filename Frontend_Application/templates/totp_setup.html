@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TOTP Setup</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header><h1>Set Up TOTP</h1></header>
+  <main>
+    <div class="totp-setup">
+      <h2>TOTP Authentication Setup</h2>
+      {% if error %}<p class="error">{{ error }}</p>{% endif %}
+
+      <p>Scan this QR code with your authenticator app:</p>
+      <img src="data:image/png;base64,{{ qr }}" alt="TOTP QR Code" class="qr">
+
+      <p><strong>Secret Key:</strong> {{ secret }}</p>
+      <p><strong>Backup Code:</strong> {{ backup }}</p>
+
+      <a href="/static/TOTPSetupGuide.pdf" download>Download TOTP Setup Guide</a>
+
+      <form method="post">
+        <label for="confirm_backup">Re-enter Backup Code:</label>
+        <input type="text" name="confirm_backup" required>
+        <button type="submit">Confirm and Continue to Auth</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

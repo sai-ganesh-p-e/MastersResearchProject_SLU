@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backup Code Login</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header><h1>Backup Code</h1></header>
+  <main>
+    <div class="auth-form">
+      <h2>Enter Backup Code</h2>
+      <p>If you're unable to log in with TOTP, use your backup code below.</p>
+      {% if error %}<p class="error">{{ error }}</p>{% endif %}
+      {% if success %}<p class="success">{{ success }}</p>{% endif %}
+      <form method="post">
+        <label for="backup">Backup Code:</label>
+        <input type="text" name="backup" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

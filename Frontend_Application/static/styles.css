@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #536976, #7f53ac);
+  background-attachment: fixed;
+  color: #333;
+}
+
+header {
+  background-color: #3a3f58;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.form-container,
+.auth-form,
+.alert-container,
+.customer-info,
+.logout-message,
+.totp-setup {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+h2 {
+  color: #3a3f58;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #7f53ac;
+  box-shadow: 0 0 4px rgba(127, 83, 172, 0.5);
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #7f53ac;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #5f3c94;
+  transform: translateY(-1px);
+}
+
+.error {
+  color: #d63031;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.success {
+  color: #27ae60;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.alert {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  color: #856404;
+  font-weight: 500;
+}
+
+.qr {
+  margin: 1rem 0;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: block;
+}
+
+.logout-btn {
+  text-align: right;
+}
+
+a {
+  color: #7f53ac;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}

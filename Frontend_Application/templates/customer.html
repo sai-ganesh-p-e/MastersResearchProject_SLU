@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header><h1>Customer Dashboard</h1></header>
+  <main>
+    <div class="customer-info">
+      <div class="logout-btn">
+        <form action="{{ url_for('logout') }}">
+          <button type="submit">Logout</button>
+        </form>
+      </div>
+
+      {% if show_alert %}
+        <div class="alert">
+          <strong>Notice:</strong> You have not set up TOTP yet. Please do so before May 17, 2025.
+        </div>
+      {% endif %}
+
+      {% if info %}
+      <h2>Account Details</h2>
+      <ul>
+        <li><strong>Customer Name:</strong> {{ info[1] }}</li>
+        <li><strong>Account Number:</strong> {{ info[7] }}</li>
+        <li><strong>Account Balance:</strong> ${{ info[8] }}</li>
+        <li><strong>Account Type:</strong> {{ info[12] }}</li>
+        <li><strong>Address:</strong> {{ info[10] }}</li>
+        <li><strong>Mobile Number:</strong> {{ info[11] }}</li>
+        <li><strong>Email:</strong> {{ info[9] }}</li>
+        <li><strong>Date of Birth:</strong> {{ info[4] }}</li>
+      </ul>
+      {% else %}
+      <p class="error">Unable to load your details. Please contact support.</p>
+      {% endif %}
+    </div>
+  </main>
+</body>
+</html>

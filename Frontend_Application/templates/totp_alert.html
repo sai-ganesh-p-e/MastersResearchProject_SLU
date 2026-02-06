@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TOTP Alert</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header><h1>TOTP Setup Alert</h1></header>
+  <main>
+    <div class="alert-container">
+      <h2>We're transitioning to TOTP authentication</h2>
+      <p>Starting May 17, 2025, TOTP will be required for all logins. Would you like to set it up now?</p>
+      <form method="post" action="{{ url_for('totp_alert_choice') }}">
+        <button name="choice" value="yes">Yes</button>
+        <button name="choice" value="no">No</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
